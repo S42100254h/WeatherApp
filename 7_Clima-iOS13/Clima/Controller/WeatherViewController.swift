@@ -83,6 +83,9 @@ extension WeatherViewController: WeatherManagerDelegate {
             temperatureLabel.text = weatherModel.temperatureString
             cityLabel.text = weatherModel.cityName
             self.conditionImageView.image = UIImage(systemName: weatherModel.conditionName)
+            // 東京の場合のみ背景画像を変更
+            let backgroundImageName = (cityLabel.text == "Tokyo") ? "tokyo" : "background"
+            self.background.image = UIImage(named: backgroundImageName)
         }
     }
     
