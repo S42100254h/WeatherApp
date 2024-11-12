@@ -15,7 +15,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
-    
+    @IBOutlet weak var background: UIImageView!
+
     
     //MARK: Properties
     var weatherManager = WeatherDataManager()
