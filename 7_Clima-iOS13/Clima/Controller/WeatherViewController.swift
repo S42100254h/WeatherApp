@@ -46,6 +46,7 @@ extension WeatherViewController: UITextFieldDelegate {
         func searchWeather(){
             if let cityName = searchField.text{
                 weatherManager.fetchWeather(cityName)
+                print("action: serach, city: \(cityName)")
             }
         }
         
