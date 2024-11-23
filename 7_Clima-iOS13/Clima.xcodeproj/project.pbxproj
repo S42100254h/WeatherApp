@@ -13,6 +13,9 @@
 		905FAD6E2CEEB0EF00C3573A /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905FAD6D2CEEB0EF00C3573A /* WeatherView.xib */; };
 		905FAD702CEEB3C700C3573A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905FAD6F2CEEB3C700C3573A /* FavoriteViewController.swift */; };
 		905FAD722CEEB44500C3573A /* FavoriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905FAD712CEEB44500C3573A /* FavoriteView.xib */; };
+		90685B8B2CF002A100F5F517 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90685B8A2CF002A100F5F517 /* JokeModel.swift */; };
+		90685B8D2CF002B000F5F517 /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90685B8C2CF002B000F5F517 /* JokeData.swift */; };
+		90685B8F2CF002BD00F5F517 /* JokeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90685B8E2CF002BD00F5F517 /* JokeDataManager.swift */; };
 		ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B0231BBFAF00365194 /* AppDelegate.swift */; };
 		ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */; };
 		ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */; };
@@ -30,6 +33,9 @@
 		905FAD6D2CEEB0EF00C3573A /* WeatherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
 		905FAD6F2CEEB3C700C3573A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		905FAD712CEEB44500C3573A /* FavoriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteView.xib; sourceTree = "<group>"; };
+		90685B8A2CF002A100F5F517 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		90685B8C2CF002B000F5F517 /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
+		90685B8E2CF002BD00F5F517 /* JokeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDataManager.swift; sourceTree = "<group>"; };
 		ADAA27AD231BBFAF00365194 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAA27B0231BBFAF00365194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 				7D64259524473AE800F1DD90 /* WeatherDataManager.swift */,
 				7D6425972451AEA500F1DD90 /* WeatherData.swift */,
 				7DB97A2B24585AB800C3BB03 /* WeatherModel.swift */,
+				90685B8A2CF002A100F5F517 /* JokeModel.swift */,
+				90685B8C2CF002B000F5F517 /* JokeData.swift */,
+				90685B8E2CF002BD00F5F517 /* JokeDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,12 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90685B8F2CF002BD00F5F517 /* JokeDataManager.swift in Sources */,
 				7D64259624473AE800F1DD90 /* WeatherDataManager.swift in Sources */,
 				7D6425982451AEA500F1DD90 /* WeatherData.swift in Sources */,
 				ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */,
 				905FAD702CEEB3C700C3573A /* FavoriteViewController.swift in Sources */,
+				90685B8B2CF002A100F5F517 /* JokeModel.swift in Sources */,
 				ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */,
 				7DB97A2C24585AB800C3BB03 /* WeatherModel.swift in Sources */,
+				90685B8D2CF002B000F5F517 /* JokeData.swift in Sources */,
 				ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
