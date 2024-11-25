@@ -64,7 +64,7 @@ extension WeatherViewController: UITextFieldDelegate {
         // by using "textField" (not "searchField") this applied to any textField in this Controller(cuz of delegate = self)
         if textField.text != "" {
             return true
-        }else{
+        } else {
             textField.placeholder = "Type something here"
             return false            // check if city name is valid
         }
@@ -76,10 +76,6 @@ extension WeatherViewController: UITextFieldDelegate {
     }
 
     @IBAction func jokeBtnClicked(_ sender: UIButton) {
-        fetchJoke()
-    }
-    
-    func fetchJoke() {
         jokeManager.fetchJoke()
     }
 }
