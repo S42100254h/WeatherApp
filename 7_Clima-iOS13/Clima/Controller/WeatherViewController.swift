@@ -16,10 +16,11 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var background: UIImageView!
-
+    @IBOutlet weak var jokeText: UITextView!
     
     //MARK: Properties
     var weatherManager = WeatherDataManager()
+    var jokeManager = JokeDataManager()
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -28,56 +29,59 @@ class WeatherViewController: UIViewController {
         locationManager.delegate = self
         weatherManager.delegate = self
         searchField.delegate = self
+        jokeManager.delegate = self
     }
-
-
 }
  
 //MARK:- TextField extension
 extension WeatherViewController: UITextFieldDelegate {
     
-        @IBAction func searchBtnClicked(_ sender: UIButton) {
-            searchField.endEditing(true)    //dismiss keyboard
-            print(searchField.text!)
-            
-            searchWeather()
+    @IBAction func searchBtnClicked(_ sender: UIButton) {
+        searchField.endEditing(true)    //dismiss keyboard
+        print(searchField.text!)
+        
+        searchWeather()
+    }
+
+    func searchWeather(){
+        if let cityName = searchField.text{
+            weatherManager.fetchWeather(cityName)
+            print("action: serach, city: \(cityName)")
         }
+    }
     
-        func searchWeather(){
-            if let cityName = searchField.text{
-                weatherManager.fetchWeather(cityName)
-                print("action: serach, city: \(cityName)")
-            }
-        }
+    // when keyboard return clicked
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchField.endEditing(true)    //dismiss keyboard
+        print(searchField.text!)
         
-        // when keyboard return clicked
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            searchField.endEditing(true)    //dismiss keyboard
-            print(searchField.text!)
-            
-            searchWeather()
+        searchWeather()
+        return true
+    }
+    
+    // when textfield deselected
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        // by using "textField" (not "searchField") this applied to any textField in this Controller(cuz of delegate = self)
+        if textField.text != "" {
             return true
+        } else {
+            textField.placeholder = "Type something here"
+            return false            // check if city name is valid
         }
-        
-        // when textfield deselected
-        func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-            // by using "textField" (not "searchField") this applied to any textField in this Controller(cuz of delegate = self)
-            if textField.text != "" {
-                return true
-            }else{
-                textField.placeholder = "Type something here"
-                return false            // check if city name is valid
-            }
-        }
-        
-        // when textfield stop editing (keyboard dismissed)
-        func textFieldDidEndEditing(_ textField: UITextField) {
-    //        searchField.text = ""   // clear textField
-        }
+    }
+    
+    // when textfield stop editing (keyboard dismissed)
+    func textFieldDidEndEditing(_ textField: UITextField) {
+//        searchField.text = ""   // clear textField
+    }
+
+    @IBAction func jokeBtnClicked(_ sender: UIButton) {
+        jokeManager.fetchJoke()
+    }
 }
 
 //MARK:- View update extension
-extension WeatherViewController: WeatherManagerDelegate {
+extension WeatherViewController: JokeManagerDelegate, WeatherManagerDelegate {
     
     func updateWeather(weatherModel: WeatherModel){
         DispatchQueue.main.sync {
@@ -90,6 +94,12 @@ extension WeatherViewController: WeatherManagerDelegate {
         }
     }
     
+    func updateJoke(jokeModel: JokeModel) {
+        DispatchQueue.main.sync {
+            jokeText.text = jokeModel.joke
+        }
+    }
+
     func failedWithError(error: Error){
         print(error)
     }
@@ -117,10 +127,3 @@ extension WeatherViewController: CLLocationManagerDelegate {
     }
 }
 
-extension WeatherViewController {
-    @IBAction func favoriteButtonClicked(_ sender: UIButton) {
-        let viewController = FavoriteViewController()
-
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-}
