@@ -3,19 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7D64259624473AE800F1DD90 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D64259524473AE800F1DD90 /* WeatherDataManager.swift */; };
 		7D6425982451AEA500F1DD90 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6425972451AEA500F1DD90 /* WeatherData.swift */; };
 		7DB97A2C24585AB800C3BB03 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB97A2B24585AB800C3BB03 /* WeatherModel.swift */; };
+		90123DA62CFF306300667DD7 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90123DA52CFF306300667DD7 /* RegionViewController.swift */; };
+		902E2F1E2CFEEBD700F8521C /* RegionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902E2F1D2CFEEBD700F8521C /* RegionView.xib */; };
 		905FAD6E2CEEB0EF00C3573A /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905FAD6D2CEEB0EF00C3573A /* WeatherView.xib */; };
 		905FAD702CEEB3C700C3573A /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905FAD6F2CEEB3C700C3573A /* FavoriteViewController.swift */; };
 		905FAD722CEEB44500C3573A /* FavoriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 905FAD712CEEB44500C3573A /* FavoriteView.xib */; };
 		90685B8B2CF002A100F5F517 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90685B8A2CF002A100F5F517 /* JokeModel.swift */; };
 		90685B8D2CF002B000F5F517 /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90685B8C2CF002B000F5F517 /* JokeData.swift */; };
 		90685B8F2CF002BD00F5F517 /* JokeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90685B8E2CF002BD00F5F517 /* JokeDataManager.swift */; };
+		906EC9842CF55C1A002684C1 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906EC9832CF55C1A002684C1 /* RegionModel.swift */; };
 		ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B0231BBFAF00365194 /* AppDelegate.swift */; };
 		ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */; };
 		ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */; };
@@ -30,12 +33,15 @@
 		7D64259524473AE800F1DD90 /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
 		7D6425972451AEA500F1DD90 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		7DB97A2B24585AB800C3BB03 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		90123DA52CFF306300667DD7 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
+		902E2F1D2CFEEBD700F8521C /* RegionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionView.xib; sourceTree = "<group>"; };
 		905FAD6D2CEEB0EF00C3573A /* WeatherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
 		905FAD6F2CEEB3C700C3573A /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		905FAD712CEEB44500C3573A /* FavoriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteView.xib; sourceTree = "<group>"; };
 		90685B8A2CF002A100F5F517 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		90685B8C2CF002B000F5F517 /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
 		90685B8E2CF002BD00F5F517 /* JokeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDataManager.swift; sourceTree = "<group>"; };
+		906EC9832CF55C1A002684C1 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
 		ADAA27AD231BBFAF00365194 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADAA27B0231BBFAF00365194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADAA27B2231BBFAF00365194 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,10 @@
 		ADAA27C5231BC02B00365194 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
 		ADAA27CD231BC87F00365194 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		905003932D03E10A000C8B4B /* UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UI; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ADAA27AA231BBFAF00365194 /* Frameworks */ = {
@@ -84,6 +94,7 @@
 				ADAA27CA231BC3FA00365194 /* Model */,
 				ADAA27C9231BC3F200365194 /* View */,
 				ADAA27C8231BC3E500365194 /* Controller */,
+				905003932D03E10A000C8B4B /* UI */,
 				ADAA27B9231BBFB300365194 /* Assets.xcassets */,
 				ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */,
 				ADAA27BE231BBFB300365194 /* Info.plist */,
@@ -98,6 +109,7 @@
 			children = (
 				ADAA27B4231BBFAF00365194 /* WeatherViewController.swift */,
 				905FAD6F2CEEB3C700C3573A /* FavoriteViewController.swift */,
+				90123DA52CFF306300667DD7 /* RegionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +119,7 @@
 			children = (
 				905FAD6D2CEEB0EF00C3573A /* WeatherView.xib */,
 				905FAD712CEEB44500C3573A /* FavoriteView.xib */,
+				902E2F1D2CFEEBD700F8521C /* RegionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +133,7 @@
 				90685B8A2CF002A100F5F517 /* JokeModel.swift */,
 				90685B8C2CF002B000F5F517 /* JokeData.swift */,
 				90685B8E2CF002BD00F5F517 /* JokeDataManager.swift */,
+				906EC9832CF55C1A002684C1 /* RegionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +152,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				905003932D03E10A000C8B4B /* UI */,
 			);
 			name = Clima;
 			productName = Clima;
@@ -188,6 +205,7 @@
 				ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */,
 				ADAA27BA231BBFB300365194 /* Assets.xcassets in Resources */,
 				905FAD722CEEB44500C3573A /* FavoriteView.xib in Resources */,
+				902E2F1E2CFEEBD700F8521C /* RegionView.xib in Resources */,
 				ADAA27C6231BC02C00365194 /* light_background.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +223,9 @@
 				ADAA27B5231BBFAF00365194 /* WeatherViewController.swift in Sources */,
 				905FAD702CEEB3C700C3573A /* FavoriteViewController.swift in Sources */,
 				90685B8B2CF002A100F5F517 /* JokeModel.swift in Sources */,
+				906EC9842CF55C1A002684C1 /* RegionModel.swift in Sources */,
 				ADAA27B1231BBFAF00365194 /* AppDelegate.swift in Sources */,
+				90123DA62CFF306300667DD7 /* RegionViewController.swift in Sources */,
 				7DB97A2C24585AB800C3BB03 /* WeatherModel.swift in Sources */,
 				90685B8D2CF002B000F5F517 /* JokeData.swift in Sources */,
 				ADAA27B3231BBFAF00365194 /* SceneDelegate.swift in Sources */,
