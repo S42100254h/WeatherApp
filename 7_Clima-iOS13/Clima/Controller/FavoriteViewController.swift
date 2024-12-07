@@ -5,6 +5,7 @@ class FavoriteViewController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
+            tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "tableViewCell")
         }
     }
 
@@ -43,9 +44,6 @@ class FavoriteViewController: UIViewController {
             action: #selector(back)
         )
         self.navigationItem.leftBarButtonItem = backButton
-
-        // テーブルビューにセルを登録
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
         // regionListの初期化
         regionList = regionCityData.map {($0.region, $0.cityList, true)}
@@ -114,22 +112,12 @@ extension FavoriteViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルのテキスト・スタイルを設定
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell // カスタムセルを利用
         let city = regionList[indexPath.section].cityList[indexPath.row]
-        cell.textLabel?.text = city.ja
-        cell.selectionStyle = .none
-        
-        // 矢印を追加
-        let arrowImageView = UIImageView(image: UIImage(systemName: "chevron.right"))
-        arrowImageView.tintColor = .gray
-        arrowImageView.translatesAutoresizingMaskIntoConstraints = false
-        cell.contentView.addSubview(arrowImageView)
-
-        // 矢印の位置を設定
-        NSLayoutConstraint.activate([
-            arrowImageView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -16),
-            arrowImageView.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor)
-        ])
+        cell.cityName?.text = city.ja
+        cell.selectionStyle = .none // 選択時のハイライトを消す
+        cell.separatorInset = .zero // セパレーターを横幅いっぱいにする
+        cell.layoutMargins = .zero // セパレーターを横幅いっぱいにする
 
         // ジェスチャー
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tapCity(sender:)))
